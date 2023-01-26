@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+	<body>
+        <!-- header section -->
+		<header class="header" id="header">
+			<nav class="navbar container">
+				<a href="index.html" class="brand">My Portfolio</a>
+				<div class="hamburger" id="hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+				<div class="menu" id="menu">
+					<ul role="list" class="menu-inner">
+						<li class="menu-item">
+							<a href="index.html" class="menu-link">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="#about" class="menu-link">About</a>
+						</li>
+						<li class="menu-item">
+							<a href="#services" class="menu-link">Services</a>
+						</li>
+						<li class="menu-item">
+							<a href="#portfolio" class="menu-link">Portfolio</a>
+						</li>
+						<!-- <li class="menu-item"><a href="#" class="menu-link">Blog</a></li> -->
+						<li class="menu-item">
+							<a href="./contact.html" class="menu-link">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<button class="button | display-sm-none">Free Consultation</button>
+			</nav>
+		</header>
+		<!-- end header section -->
+        <main>
+
+         <h1>Contact Us</h1>
+  
+            <!-- Create Form -->
+    <form class="contact" id="form">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Phone
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your phone #" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Company
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your company" />
+        </div>
+  
+        <div class="form-control">
+            <label for="role" id="label-role">
+                What type of business are you?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="student">Small</option>
+                <option value="intern">Mid Market</option>
+                <option value="professional">
+                    Large 
+                </option>
+                <option value="other">Agency</option>
+                <option value="other">Funded Startup</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>What type of services are you looking for?
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">Lead Generation</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Web Redesign</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Landing Page Development</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">SEO And SEM Strategy</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Custom Web Development</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">JavaScript</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">UI/UX Design</input></label>
+            <label for="inp-8">
+                <input type="checkbox"
+                       name="inp">Content Writing</input></label>
+            <label for="inp-9">
+                <input type="checkbox"
+                       name="inp">Marketing Automation Strategy</input></label>
+            <label for="inp-10">
+                <input type="checkbox"
+                       name="inp">Ecommerce/Portals</input></label>
+        </div>
+  
+        <div class="form-control">
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Message">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit-btn" value="submit">
+            Submit
+        </form>
+    </main>
+
+	</body>
+    <!-- footer section -->
+		<footer
+			class="padding-block-700 | bg-neutral-700 | text-neutral-100"
+			id="#footer"
+		>
+			<!-- same as section bg-footer -->
+			<div class="container">
+				<!-- same as container -->
+				<div class="primary-footer-wrapper">
+					<!-- same as row -->
+
+					<!-- Begin Column -->
+					<div class="primary-footer-nav">
+						<!-- same as col-lg-4 col-sm-4 col-xs-12 -->
+						<h2 class="fs-secondary-heading fw-semi-bold footer-heading">
+							Information
+						</h2>
+						<div class="footer-nav">
+							<!-- same as single_footer -->
+							<ul
+								class="footer-links flow"
+								style="--flow-spacer: 1em"
+								aria-label="footer"
+								role="list"
+							>
+								<!-- same as list-unstyled footer-link mt-4 -->
+								<li><a href="#home">Home</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#services">Services</a></li>
+								<li><a href="#portfolio">Portfolio</a></li>
+								<!-- <li><a href="#">Blog</a></li> -->
+								<li><a href="./contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- End Column -->
+
+					<!-- Begin Column -->
+					<div class="primary-page-links">
+						<!-- same as col-lg-4 col-sm-4 col-xs-12 -->
+						<h2 class="fs-secondary-heading fw-semi-bold footer-heading">
+							Page Links
+						</h2>
+						<div class="page-links">
+							<!-- same as single_footer -->
+							<ul
+								class="footer-links flow"
+								style="--flow-spacer: 1em"
+								aria-label="footer"
+								role="list"
+							>
+								<!-- same as list-unstyled footer-link mt-4 -->
+								<li>
+									<a href="./portfolio projects/Blockchain Event/index.html"
+										>Blockchain Event</a
+									>
+								</li>
+								<li>
+									<a href="./portfolio projects/My Landing Page/index.html"
+										>Landing Page</a
+									>
+								</li>
+								<li>
+									<a href="./portfolio projects/restaurant website/index.html"
+										>Restaurant</a
+									>
+								</li>
+								<li>
+									<a href="./portfolio projects/Parallax/index.html"
+										>Parallax Website</a
+									>
+								</li>
+								<li>
+									<a href="./portfolio projects/Contact Form/index.html"
+										>Contact Form</a
+									>
+								</li>
+								<li>
+									<a href="./portfolio projects/Concerts/index.html">Concert</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- End Column -->
+
+					<!-- Begin Column -->
+					<div class="primary-footer-footer-form">
+						<!-- same as col-lg-4 col-sm-4 col-xs-12 -->
+						<h2 class="fs-secondary-heading fw-semi-bold footer-heading">
+							Subscribe Today
+						</h2>
+						<div class="footer-form">
+							<form action="" class="form-inline">
+								<!-- same as subscribe -->
+								<input type="email" placeholder="Enter Email Address" />
+								<!-- same as subscribe__input-->
+								<button class="subscribe" type="button">
+									<i class="fa fa-paper-plane"></i>
+								</button>
+							</form>
+						</div>
+
+						<ul role="list" class="social" aria-label="social links">
+							<!-- same as social_profile -->
+							<li>
+								<a href="#" aria-label="facebook">
+									<svg class="icon">
+										<use
+											xlink:href="images/social-icons.svg#icon-facebook"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="instagram">
+									<svg class="icon">
+										<use
+											xlink:href="images/social-icons.svg#icon-instagram"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="twitter">
+									<svg class="icon">
+										<use
+											xlink:href="images/social-icons.svg#icon-twitter"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="pinterest">
+									<svg class="icon">
+										<use
+											xlink:href="images/social-icons.svg#icon-pinterest"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="youtube">
+									<svg class="icon">
+										<use
+											xlink:href="images/social-icons.svg#icon-youtube"
+										></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End Column -->
+				</div>
+				<div class="primary-footer-wrapper">
+					<p>Copright&copy 2023. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer section -->
+	<script src="app.js"></script>
+</html>
