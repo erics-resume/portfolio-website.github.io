@@ -1,0 +1,411 @@
+/* General */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+}
+a {
+	text-decoration: none;
+}
+/* Sets the general container to 100% height and aligns things to center */
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* sets images to 100% height & width and to cover space */
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+/* set the properties of all paragraph elements */
+p {
+	color: rgb(37, 36, 36);
+	font-size: 1.1rem;
+	margin-top: 5px;
+	line-height: 1.5em;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+/* title for each section */
+.section-title {
+	font-size: 3.5rem;
+	font-weight: 500;
+	color: goldenrod;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+/* General */
+
+/* header and navbar  */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: transparent;
+	transition: 0.3s ease background-color;
+}
+.header .navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1500px;
+	padding: 0 15px;
+	min-height: 8vh;
+	background-color: transparent;
+	transition: 0.3s ease background-color;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo img {
+	width: 80px;
+	border-radius: 50px;
+}
+/* generate background of navbar */
+.navbar .nav-list {
+	justify-content: flex-end;
+}
+.navbar .nav-list ul {
+	/*
+	list-style: none;
+	position: absolute;
+	background-color: rgb(37, 36, 36);
+	width: 80vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.4s ease left;
+	*/
+	justify-content: flex-end;
+	text-decoration: none;
+	position: initial;
+	display: block;
+	height: auto;
+	width: fit-content;
+	background-color: transparent;
+}
+.navbar .nav-list ul li {
+	display: inline-block;
+}
+/*
+.navbar .nav-list ul.active {
+	left: 0%;
+}
+*/
+/* the nav links */
+.navbar .nav-list ul a {
+	/*
+	font-size: 2.1rem;
+	font-weight: 300;
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+	*/
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	padding: 20px 25px;
+	color: #fff;
+}
+.navbar .nav-list ul .cta {
+	display: inline-block;
+	color: white;
+	background-color: rgb(12, 180, 12);
+	font-size: 1.1rem;
+	padding: 10px 15px;
+	border-radius: 2px;
+}
+/* end header and navbar  */
+.navbar .nav-list ul a::after {
+	/*
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgb(37, 36, 36, 0.021);
+	font-size: 1rem;
+	letter-spacing: 44px;
+	z-index: -1;
+	transition: 3.5s ease letter-spacing;
+	*/
+	display: none;
+}
+.navbar .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+.navbar .nav-list ul li:hover a {
+	color: rgb(216, 158, 10);
+	transition: 0.3s ease;
+}
+.nav-list > li > cta:focus,
+.nav > li > cta:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Hero section */
+/* creates hero image background */
+#hero {
+	background-image: url(/images/conference.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+/* Sets the shading of the overlay */
+#hero::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.3;
+	z-index: -1;
+}
+#hero .container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: center;
+}
+/* The title and reveal animation */
+#hero .overlay h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4.1rem;
+	font-weight: 500;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+.overlay h1:nth-child(1) {
+	animation-delay: 0.5s;
+}
+.overlay h1:nth-child(2) {
+	animation-delay: 1.5s;
+}
+.overlay h1:nth-child(3) {
+	animation-delay: 2.5s;
+}
+/* creates animations for each individual child/line */
+.overlay h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: rgb(247, 3, 247);
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.3s;
+}
+.overlay h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+.overlay h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+.overlay h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+/* creates the button with the border */
+.btn {
+	display: inline-block;
+	color: white;
+	background-color: transparent;
+	border: 2px solid rgb(12, 180, 12);
+	font-size: 1.8rem;
+	padding: 15px 50px;
+	letter-spacing: 0.1rem;
+	margin-top: 50px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.btn:hover {
+	color: white;
+	background-color: rgb(12, 180, 12);
+}
+/* end Hero section */
+
+/* Topics Section */
+/* The cards section */
+#topics .topics-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 3.5rem;
+	margin-bottom: 4rem;
+}
+#topics .card {
+	flex-basis: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: 0.3s;
+}
+#topics .card:after {
+	content: "";
+	position: absolute;
+	/* align-items: center; */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/* z-index: -1; */
+}
+#topics .card img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	aspect-ratio: 16/9;
+}
+#topics .card .content {
+	line-height: 1.3em;
+	font-size: 1rem;
+	padding: 1rem;
+	text-align: center;
+}
+#topics .card:hover {
+	z-index: 1;
+	box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+}
+#topics .card .small-btn {
+	background: goldenrod;
+	border: 1px solid goldenrod;
+	color: #fff;
+	font-size: 0.7rem;
+	padding: 0.8em 1.8em;
+	border-radius: 0.25em;
+	margin-top: 10px;
+	cursor: pointer;
+}
+/* End Topics Section */
+
+/* Footer */
+#footer {
+	background-image: linear-gradient(60deg, rgb(76, 45, 216), rgb(202, 17, 202));
+}
+#footer .footer {
+	flex-direction: column;
+	padding-top: 4rem;
+	padding-bottom: 1rem;
+}
+#footer h2 {
+	color: #fff;
+	font-weight: 500;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+#footer .social-icons {
+	display: flex;
+	margin-bottom: 2rem;
+}
+#footer .social-icon {
+	height: 45px;
+	width: 45px;
+	margin: 0 5px;
+}
+
+/* end Footer */
+
+/* Keyframes */
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: #fff;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: goldenrod;
+		font-weight: 300;
+	}
+}
+/* End Keyframes */
+
+@media only screen and (min-width: 1200px) {
+	/* topics cards */
+	#topics .topics-bottom .card {
+		flex-basis: 28%;
+		margin: 1.5%;
+	}
+	/* end topics cards */
+
+	/*
+	.footer {
+		padding: 4rem 0;
+	}
+	.footer-links a {
+		font-size: 1rem;
+	}
+	.footer .title-sm {
+		margin-bottom: 0.5rem;
+	}
+	.input-wrap {
+		height: 30px;
+		margin-top: 0.8rem;
+	}
+	.footer-input {
+		font-size: 0.9rem;
+		padding: 0 1.2rem;
+	}
+	.input-arrow {
+		font-size: 1.1rem;
+	}
+	*/
+}

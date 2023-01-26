@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h1>Contact Us</h1>
+  
+    <!-- Create Form -->
+    <form id="form">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Phone
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your phone #" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Company
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your company" />
+        </div>
+  
+        <div class="form-control">
+            <label for="role" id="label-role">
+                What type of business are you?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="student">Small</option>
+                <option value="intern">Mid Market</option>
+                <option value="professional">
+                    Large 
+                </option>
+                <option value="other">Agency</option>
+                <option value="other">Funded Startup</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>What type of services are you looking for?
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">Lead Generation</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Web Redesign</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Landing Page Development</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">SEO And SEM Strategy</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Custom Web Development</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">JavaScript</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">UI/UX Design</input></label>
+            <label for="inp-8">
+                <input type="checkbox"
+                       name="inp">Content Writing</input></label>
+            <label for="inp-9">
+                <input type="checkbox"
+                       name="inp">Marketing Automation Strategy</input></label>
+            <label for="inp-10">
+                <input type="checkbox"
+                       name="inp">Ecommerce/Portals</input></label>
+        </div>
+  
+        <div class="form-control">
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Message">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>
